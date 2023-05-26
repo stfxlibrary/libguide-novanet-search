@@ -17,5 +17,5 @@
 ## Note:
 To retain your banner image add modify and add the following code before the novanet search code
 ```
-<div id="s-lib-banner" class="container s-lib-banner-public"><a href=````"https://library.stfx.ca"```` title=" target="" aria-hidden="true" tabindex="-1"><img alt="Angus L. MacDonald Library - St. Francis Xavier University - Subject Guide Home" name="s-lib-banner-img" id="s-lib-banner-img" class="img-responsive" src="//libapps-ca.s3.amazonaws.com/sites/877/banner/libguide_logo_-_narrow.png" aria-hidden="true" tabindex="-1"></a></div>
+<div id="s-lib-banner" class="container s-lib-banner-public"><a href="https://library.stfx.ca" title=" target="" aria-hidden="true" tabindex="-1"><img alt="Angus L. MacDonald Library - St. Francis Xavier University - Subject Guide Home" name="s-lib-banner-img" id="s-lib-banner-img" class="img-responsive" src="//libapps-ca.s3.amazonaws.com/sites/877/banner/libguide_logo_-_narrow.png" aria-hidden="true" tabindex="-1"></a></div>
 ```
