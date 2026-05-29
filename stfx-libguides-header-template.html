@@ -1,0 +1,92 @@
+<style>
+  #site-header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 0.75rem;
+  }
+
+  #site-header a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #site-header a:hover {
+    text-decoration: underline;
+  }
+
+  #site-header .search-links a {
+    white-space: nowrap;
+  }
+
+  #site-logo {
+    padding: 0.75rem;
+  }
+
+  #site-logo a {
+    text-decoration: none;
+  }
+
+  #site-logo a:hover {
+    text-decoration: none;
+  }
+
+  #site-logo .search-links a {
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+  function searchSTFXNovanet() {
+    document.getElementById("stfxNovanetQuery").value = "any,contains," + document.getElementById("stfxNovanetQueryTemp").value.replace(/[,]/g, " ");
+    document.forms["stfxSearchForm"].submit();
+  }
+</script>
+<header id="site-logo" class="container container-fluid s-lib-side-borders">
+  <!-- Library logo banner -->
+  <div class="px-3">
+    <img src="//libapps-ca.s3.amazonaws.com/sites/877/banner/libguide_logo_-_narrow.png"
+         alt="Angus L. Macdonald Library" class="img-fluid">
+  </div>
+</header>
+
+<header id="site-header" class="container container-fluid s-lib-side-borders">
+
+
+  <div class="d-flex flex-wrap align-items-center gap-3 px-3">
+
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img src="https://stfx.novanet.ca/discovery/custom/01NOVA_NETWORK-CENTRAL_PACKAGE/img/novanet-logo.svg"
+           alt="Novanet logo" style="height: 70px;">
+    </div>
+
+    <!-- Search form -->
+    <div class="flex-grow-1">
+      <form action="https://stfx.novanet.ca/discovery/search?query="
+            enctype="application/x-www-form-urlencoded; charset=utf-8"
+            method="get" name="stfxSearchForm"
+            onsubmit="searchSTFXNovanet(); return false;">
+        <input type="hidden" name="vid" value="01NOVA_STFX:STFX" />
+        <input type="hidden" name="tab" value="Everything" />
+        <input type="hidden" name="search_scope" value="Everything" />
+        <input type="hidden" name="lang" value="en" />
+        <input type="hidden" name="query" id="stfxNovanetQuery" />
+        <div class="input-group">
+          <input class="form-control" id="stfxNovanetQueryTemp" name="stfxNovanetQueryTemp"
+                 placeholder="Search the library catalogue"
+                 title="Search StFX Library for books, articles, and more"
+                 type="text" />
+          <button class="btn btn-light" type="button" onclick="searchSTFXNovanet()">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Quick links -->
+    <div class="d-flex flex-wrap gap-3 search-links">
+      <a href="https://stfx.novanet.ca/discovery/search?vid=01NOVA_STFX:STFX&lang=en&mode=advanced">Advanced Search</a>
+      <a href="https://stfx.novanet.ca/discovery/search?vid=01NOVA_STFX:STFX&tab=CourseReserves&search_scope=CourseReserves&query=any,contains,S*">Course Reserves</a>
+      <a href="https://stfx.novanet.ca/discovery/account?vid=01NOVA_STFX:STFX">My Library Account</a>
+    </div>
+
+  </div>
+</header>
